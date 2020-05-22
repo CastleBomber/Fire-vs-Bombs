@@ -8,7 +8,7 @@ class ShowManager():
         #lightShow.process();
 
         teamShow = TeamShow()
-        teamShow.process();
+        teamShow.process()
 
         #soundShow = SoundShow()
         #soundShow.process();
