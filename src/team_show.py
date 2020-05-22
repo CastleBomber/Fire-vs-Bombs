@@ -6,20 +6,15 @@ import os
 import time
 from struct import unpack
 import numpy as np
-##chop
 
-
-'''
-    16x32
-'''
 class TeamShow(SoundManager):
     def __init__(self, *args, **kwargs):
         super(TeamShow, self).__init__(*args, **kwargs)
 
-        
+
     def run(self):
         self.teamWaveForm()
-        
+
     # 16x32
     def teamWaveForm(self):
         canvas = self.matrix.CreateFrameCanvas()
@@ -40,5 +35,3 @@ class TeamShow(SoundManager):
                         canvas.SetPixel(x+2,y,0,0,0)
                 i+=1
             canvas = self.matrix.SwapOnVSync(canvas)
-
-        
