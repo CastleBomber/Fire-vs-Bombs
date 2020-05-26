@@ -39,7 +39,7 @@ def calculate_levels(data, chunk, sample_rate):
 
 
     height[0] = int(np.mean(power[piff(9000):piff(16000):1])/1000)
-    height[1] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[1] = int(np.mean(power[piff(9000):piff(16000):1])/1000)
     height[2] = int(np.mean(power[piff(9000):piff(16000):1])/75)
     height[3] = int(np.mean(power[piff(9000):piff(16000):1])/75)
     height[4] = int(np.mean(power[piff(9000):piff(16000):1])/75)
