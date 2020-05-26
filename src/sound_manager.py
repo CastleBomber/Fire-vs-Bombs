@@ -35,22 +35,30 @@ def calculate_levels(data, chunk, sample_rate):
     fourier = np.delete(fourier, len(fourier)-1)
     # Find average 'amplitude' for specific frequency ranges in Hz
     power = np.abs(fourier)
+
+
+
+
     height[0] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[1] = int(np.mean(power[piff(7000):piff(10000):1])/75)
-    height[2] = int(np.mean(power[piff(5000):piff(7000):1])/75)
-    height[3] = int(np.mean(power[piff(2000):piff(5000):1])/75)
-    height[4] = int(np.mean(power[piff(1500):piff(2000):1])/100)
-    height[5] = int(np.mean(power[piff(1000):piff(1500):1])/200)
-    height[6] = int(np.mean(power[piff(500):piff(1000):1])/350)
-    height[7] = int(np.mean(power[piff(250):piff(500):1])/500)
-    height[8] = int(np.mean(power[piff(150):piff(250):1])/750)
-    height[9] = int(np.mean(power[piff(100):piff(150):1])/1000)
+    height[1] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[2] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[3] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[4] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[5] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[6] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[7] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[8] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[9] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+
+
+
+
+
     print(height)
     #print(piff(16000))
     return height
 
 height = {9:0,8:0,7:0,6:0,5:0,4:0,3:0,2:0,1:0,0:0}
-
 
 def red(y):
     if(y < 2): return 0
@@ -64,7 +72,7 @@ def green(y):
 
 def piff(val):
     return int(2*chunk*val/sample_rate)
-    
+
 '''
 
 '''
