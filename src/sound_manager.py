@@ -26,7 +26,9 @@ stream = p.open(format = pyaudio.paInt16,
             dictionary containing (freq perh.)
 
     piff(9000)  = 1632
-    piff(16000) =
+    piff(16000) = 2902
+
+    power[piff(9000):piff(16000):1]
 '''
 def calculate_levels(data, chunk, sample_rate):
     data = unpack("%dh"%(len(data)/2),data)
@@ -41,16 +43,16 @@ def calculate_levels(data, chunk, sample_rate):
 
 
 
-    height[0] = int(np.mean(power[piff(9000):piff(16000):1])/1000)
-    height[1] = int(np.mean(power[piff(9000):piff(16000):1])/1000)
-    height[2] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[3] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[4] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[5] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[6] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[7] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[8] = int(np.mean(power[piff(9000):piff(16000):1])/75)
-    height[9] = int(np.mean(power[piff(9000):piff(16000):1])/75)
+    height[0] = int(np.mean(power[piff(9000):piff(16000):1])/1)
+    height[1] = int(np.mean(power[piff(9000):piff(16000):1])/10)
+    height[2] = int(np.mean(power[piff(9000):piff(16000):1])/100)
+    height[3] = int(np.mean(power[piff(9000):piff(16000):1])/1000)
+    height[4] = int(np.mean(power[piff(9000):piff(16000):1])/10000)
+    height[5] = int(np.mean(power[piff(9000):piff(16000):1])/100000)
+    height[6] = int(np.mean(power[piff(9000):piff(16000):1])/1000000)
+    height[7] = int(np.mean(power[piff(9000):piff(16000):1])/10000000)
+    height[8] = int(np.mean(power[piff(9000):piff(16000):1])/100000000)
+    height[9] = int(np.mean(power[piff(9000):piff(16000):1])/1000000000)
 
 
 
