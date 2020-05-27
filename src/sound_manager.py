@@ -58,8 +58,8 @@ def calculate_levels(data, chunk, sample_rate):
 
 
     print(height)
-    print("goods::  ")
-    print(piff(16000))
+    print("testing for the goods::  ")
+    print(power[piff(9000):piff(16000):1])
     return height
 
 height = {9:0,8:0,7:0,6:0,5:0,4:0,3:0,2:0,1:0,0:0}
