@@ -30,8 +30,13 @@ else:
 image = Image.open(image_file)
 
 # Configuration for the matrix
+
 options = RGBMatrixOptions()
-options.rows = 32
+
+
+options.rows = 64 
+options.rows = 64
+
 options.chain_length = 1
 options.parallel = 1
 options.hardware_mapping = 'adafruit-hat'
