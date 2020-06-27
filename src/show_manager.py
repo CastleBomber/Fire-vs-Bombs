@@ -4,11 +4,11 @@ from sound_show import SoundShow # <<--   ;)
 
 class ShowManager():
     def __init__(self):
-        #lightShow = LightShow()
-        #lightShow.process();
+        lightShow = LightShow()
+        lightShow.process();
 
         #teamShow = TeamShow()
         #teamShow.process()   # why do these need ; ?
 
-        soundShow = SoundShow()
-        soundShow.process();
+        #soundShow = SoundShow()
+        #soundShow.process();

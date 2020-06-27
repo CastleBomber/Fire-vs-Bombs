@@ -7,31 +7,33 @@ import time
 
 '''
     Attack On Dragon's Gate's Code
-    
+
     Raspberry Pi + RGB Hat
     1 32x32 LED Matrix
-    
+
 '''
 class LightShow(LightManager):
     def __init__(self, *args, **kwargs):
         super(LightShow, self).__init__(*args, **kwargs)
-    
+
     # all the work is done here
     # self.functionCall(arguments)
     def run(self):
         self.showMyWork("64x64", 64)
-        
+
         self.sceneFlipThroughCount("whiteMoonScene", 1)
         self.goRight("bomb_right_wb")
         self.sceneFlipThroughCount("finalScene", 1)
         self.usleep(999999999)
 
+    # Error! fix f(x)!!!
+    # I do like the pixelMax wording
     # @param sheet - pixelSheet to show off
     # @param pixelMax - maxiumum # of pixels for 32x32 or 64x64
     def showMyWork(self, sheet, pixelMax):
         canvas = self.matrix.CreateFrameCanvas()
         sheetName = sheet
-        
+
         fo = open('/home/pi/Desktop/pixelSheets/' + sheetName)
         pixelStr = fo.read()
         pixelStr = re.sub(r"[\n\t\s]*", "", pixelStr)
@@ -53,8 +55,8 @@ class LightShow(LightManager):
     def showMyWorkInDir(self, sheet):
         canvas = self.matrix.CreateFrameCanvas()
         sheetName = sheet
-        
-        fo = open('/home/pi/Desktop/' + sheetName)
+
+        fo = open('/home/pi/Desktop/Fire-vs-Bombs/src' + sheetName)
         pixelStr = fo.read()
         pixelStr = re.sub(r"[\n\t\s]*", "", pixelStr)
         count = 0
@@ -92,7 +94,7 @@ class LightShow(LightManager):
                 self.usleep(999999)
                 fo.close()
 
-    
+
     # Sigil goes left,
     # set up count for 32 steps
     # would slowly slide up if not stopped
@@ -118,7 +120,7 @@ class LightShow(LightManager):
             headlessStr = pixelStr[1:]
             pixelStr = headlessStr + pixelStr[0]
             count += 1
-            
+
         fo.close()
 
     def goRight(self, sheet):
@@ -143,9 +145,9 @@ class LightShow(LightManager):
             taillessStr = pixelStr[:-1]
             pixelStr =  pixelStr[-1:] + taillessStr
             count += 1
-            
+
         fo.close()
-        
+
     # Choosing specific scene
     # should add time factor
     def sceneFlipThrough(self, scene):
@@ -196,12 +198,12 @@ class LightShow(LightManager):
                 fo.close()
             flips += 1
         #self.usleep(9999999)
-                
+
 
     def rndmKaskade(self, sheet):
         canvas = self.matrix.CreateFrameCanvas()
         sheetName = sheet
-        
+
         fo = open('/home/pi/Desktop/pixelSheets/' + sheetName)
         pixelStr = fo.read()
         pixelStr = re.sub(r"[\n\t\s]*", "", pixelStr)
@@ -225,7 +227,7 @@ class LightShow(LightManager):
     def kaskade(self, sheet):
         canvas = self.matrix.CreateFrameCanvas()
         sheetName = sheet
-        
+
         fo = open('/home/pi/Desktop/pixelSheets/' + sheetName)
         pixelStr = fo.read()
         pixelStr = re.sub(r"[\n\t\s]*", "", pixelStr)
