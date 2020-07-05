@@ -24,8 +24,8 @@ options = RGBMatrixOptions()
 
 options.rows = 64 # works
 options.cols = 64 #
-options.chain_length = 1 # 
-options.parallel = 1
+options.chain_length = 1 #
+options.parallel = 2
 options.hardware_mapping = 'adafruit-hat'
 
 image = Image.open(image_file)
