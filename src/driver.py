@@ -2,7 +2,7 @@
 '''
 sudo ./driver.py --led-rows=32 --led-cols=32  --led-brightness=60 --led-pwm-lsb-nanoseconds=300 --led-slowdown-gpio=2
 
-    Code: Team Waveform
+    Code: CastleBomber + Team Waveform
 '''
 
 from show_manager import ShowManager
