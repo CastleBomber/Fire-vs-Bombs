@@ -1,3 +1,8 @@
+'''
+    [CS 180] Team Waveform's Sound Visualizer
+    Authors: Dylan Moon, Richie R. CastleBomber, Luke Lewis, Joey Barcia
+'''
+
 from samplebase import SampleBase
 #from team_show import TeamShow
 from team_show import *
@@ -17,11 +22,11 @@ import numpy as np
 class SoundShow(SoundManager):
     def __init__(self, *args, **kwargs):
         super(SoundShow, self).__init__(*args, **kwargs)
-        
+
     def run(self):
         self.soundVisualizer()
-        
-     
+
+
     def soundVisualizer(self):
         canvas = self.matrix.CreateFrameCanvas()
         while True:
