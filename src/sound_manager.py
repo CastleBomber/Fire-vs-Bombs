@@ -1,3 +1,8 @@
+'''
+    [CS 180] Team Waveform's Sound Visualizer
+    Authors: Dylan Moon, Richie R. CastleBomber, Luke Lewis, Joey Barcia
+'''
+
 from samplebase import SampleBase
 import pyaudio
 import re
